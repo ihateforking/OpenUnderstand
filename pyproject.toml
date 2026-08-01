@@ -1,10 +1,5 @@
 [tool.pytest.ini_options]
-testpaths = [
-    "test_analysis",
-    "test_analysis_G6",
-    "test_analysis_G9",
-    "test_metrics",
-]
+testpaths = ["tests"]
 pythonpath = ["openunderstand"]
 addopts = "-ra --strict-config --strict-markers"
 
