@@ -1363,7 +1363,7 @@ class Kind(object):
         if self.is_ent_kind:
             raise UnderstandError()
         inverse = KindModel.get_by_id(pk=self._inv)
-        return Kind(**inverse.__data__.get("__data__"))
+        return Kind(**inverse.__data__)
 
     @staticmethod
     def list_entity(entkind=""):  # real signature unknown; restored from __doc__
