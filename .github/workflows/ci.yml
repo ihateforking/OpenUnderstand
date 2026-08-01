@@ -54,6 +54,9 @@ jobs:
           --cov-report=xml:reports/coverage.xml
           --cov-report=html:reports/htmlcov
 
+      - name: Verify curated Pynguin tests
+        run: python -m pytest tests/test_pynguin_models.py -q
+
       - name: Enforce line coverage gate
         run: python -m coverage report --fail-under=80
 
