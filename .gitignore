@@ -168,3 +168,5 @@ cython_debug/
 *.oudb
 benchmark/
 /artifacts/
+cosmic-ray-session.sqlite
+cosmic-ray-baseline.sqlite
