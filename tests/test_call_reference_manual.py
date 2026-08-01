@@ -2,7 +2,8 @@
 
 import pytest
 
-from openunderstand.oudb.api import UnderstandError, create_db, open as open_db
+from openunderstand.oudb.api import UnderstandError, create_db
+from openunderstand.oudb.api import open as open_db
 from openunderstand.oudb.models import EntityModel, KindModel, ReferenceModel
 
 
@@ -10,7 +11,7 @@ from openunderstand.oudb.models import EntityModel, KindModel, ReferenceModel
 def analysis_db(tmp_path):
     """Create a small deterministic database representing two Java files."""
     db_path = tmp_path / "manual.oudb"
-    db = create_db(
+    create_db(
         dbname=db_path.name,
         project_dir=str(tmp_path),
         db_path=str(tmp_path),
